@@ -1,4 +1,4 @@
-export function renderAlbum(Albums) {
+export function renderAlbum(Album) {
     const albumEl = document.createElement('div');
     const titleEl = document.createElement('p');
     const ArtistEl = document.createElement('p');
@@ -7,14 +7,14 @@ export function renderAlbum(Albums) {
 
     albumEl.classList.add('album');
 
-    titleEl.textContent = Albums.Title;
-    ArtistEl.textContent = Albums.Artist;
-    releaseEl.textContent = Albums.ReleaseDate;
+    titleEl.textContent = Album.Title;
+    ArtistEl.textContent = Album.Artist;
+    releaseEl.textContent = Album.Release_Date;
     
-    for (let genre of Albums.Genre) {
+    for (let Genre of Album.Genre) {
         const li = document.createElement('li');
 
-        li.textContent = genre;
+        li.textContent = Genre;
         genreEl.appendChild(li);
     }
 

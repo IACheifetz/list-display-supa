@@ -18,8 +18,11 @@ window.addEventListener('load', async () => {
 async function fetchAndDisplayAlbums() {
 
     const albums = await getAlbums();
-    for (let album of albums) {
-        const albumEl = renderAlbum(album);
+
+    for (let Album of albums) {
+
+        const albumEl = renderAlbum(Album);
+        
         albumsListEl.append(albumEl);
     }
 }
