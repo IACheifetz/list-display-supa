@@ -1,29 +1,27 @@
-export function renderAlbum(Album) {
+export function renderAlbums(album) {
+
+    console.log(album);
+
     const albumEl = document.createElement('div');
     const titleEl = document.createElement('p');
-    const ArtistEl = document.createElement('p');
+    const artistEl = document.createElement('p');
     const releaseEl = document.createElement('p');
-    const genreEl = document.createElement('ul');
+    const genreEl = document.createElement('h4');
 
     albumEl.classList.add('album');
 
-    titleEl.textContent = Album.Title;
-    ArtistEl.textContent = Album.Artist;
-    releaseEl.textContent = Album.Release_Date;
+    titleEl.textContent = album.Title;
+    artistEl.textContent = album.Artist;
+    releaseEl.textContent = album.Release_Date;
     
-    for (let Genre of Album.Genre) {
-        const li = document.createElement('li');
+    for (let Genre of album.Genre) {
+        const pTag = document.createElement('p');
 
-        li.textContent = Genre;
-        genreEl.appendChild(li);
+        pTag.textContent = Genre;
+        genreEl.append(pTag);
     }
 
-    albumEl.append(
-        titleEl,
-        ArtistEl,
-        releaseEl,
-        genreEl
-    );
+    albumEl.append(titleEl, artistEl, releaseEl, genreEl);
 
     return albumEl;
 }
