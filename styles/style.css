@@ -28,7 +28,7 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    background-color: grey;
 }
 
 main {
@@ -36,12 +36,13 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: calc(var(--footer-height));
+    margin-bottom: calc(var(--footer-height))
 }
 
 section {
-    background-color: var(--color5);
+    background-color: darkgray;
     max-width: 80%;
+    height: 1100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,7 +51,6 @@ section {
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
 }
 
 header {
@@ -88,4 +88,39 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+}
+
+.albums-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    height: 150px;
+}
+.games-list {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    height: 150px;
+}
+.movies-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    height: 150px;
+}
+
+.main-section {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.animals-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    height: 5px;
+    flex-direction: column;
+    
 }
