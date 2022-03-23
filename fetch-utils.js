@@ -17,3 +17,17 @@ export async function getGames() {
         .select ('*');
     return response.body;
 }
+
+export async function getMovies() {
+    const response = await client
+        .from('Movies')
+        .select ('*');
+    return response.body;
+}
+
+export async function getAnimals() {
+    const response = await client
+        .from('Animals')
+        .select ('*');
+    return response.body;
+}

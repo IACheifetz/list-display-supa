@@ -1,7 +1,7 @@
 // import functions and grab DOM elements
 
-import { getAlbums, getGames } from './fetch-utils.js';
-import { renderAlbums, renderGames } from './render-utils.js';
+import { getAlbums, getGames, getMovies, getAnimals } from './fetch-utils.js';
+import { renderAlbums, renderGames, renderMovies, renderAnimals } from './render-utils.js';
 
 // let state
 
@@ -13,6 +13,8 @@ import { renderAlbums, renderGames } from './render-utils.js';
 window.addEventListener('load', async () => {
     fetchAndDisplayAlbums();
     fetchAndDisplayGames();
+    fetchAndDisplayMovies();
+    fetchAndDisplayAnimals();
 });
 
 const albumsListEl = document.querySelector('.albums-list');
@@ -38,5 +40,31 @@ async function fetchAndDisplayGames() {
         const GameEl = renderGames(Game);
       
         gamesListEl.append(GameEl);
+    }
+}
+
+const moviesListEl = document.querySelector('.movies-list');
+
+async function fetchAndDisplayMovies() {
+
+    const movies = await getMovies();
+  
+    for (let movie of movies) {
+        const movieEl = renderMovies(movie);
+        
+        moviesListEl.append(movieEl);
+    }
+}
+
+const animalsListEl = document.querySelector('.animals-list');
+
+async function fetchAndDisplayAnimals() {
+
+    const animals = await getAnimals();
+
+    for (let Animal of animals) {
+        const animalEl = renderAnimals(Animal);
+      
+        animalsListEl.append(animalEl);
     }
 }
