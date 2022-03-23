@@ -28,7 +28,7 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    background-color: grey;
 }
 
 main {
@@ -36,7 +36,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: calc(var(--footer-height));
+    margin-bottom: calc(var(--footer-height))
 }
 
 section {
@@ -93,4 +93,6 @@ footer {
 .albums-list {
     display: flex;
     flex-wrap: wrap;
+    width: 800px;
+    height: 150px;
 }

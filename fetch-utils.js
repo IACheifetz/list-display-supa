@@ -7,5 +7,13 @@ export async function getAlbums() {
     const response = await client
         .from('Albums')
         .select ('*');
+    console.log(response);
+    return response.body;
+}
+
+export async function getGames() {
+    const response = await client
+        .from('VideoGames')
+        .select ('*');
     return response.body;
 }
